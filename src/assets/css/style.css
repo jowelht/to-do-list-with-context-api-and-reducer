@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.75;
+  position: relative;
+  visibility: visible;
+  overflow-x: hidden;
+  color: #696969;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.text-center {
+    text-align: center;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dark {
+    height: 100%;
+    background: #333;
+}
+
+.header{
+    padding: 10px;
+}
+.logo {
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+/* Todo Header CSS */
+.todo-hearder-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.todo-hearder-wrap input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+.to-do-list-nav {
+    padding: 0;
+    list-style: none;
+}
+.list-title {
+    margin-bottom: 20px;
+}
+.to-do-list-nav li {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    position: relative;
+    padding: 10px;
+}
+.btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: green;
+}
+.btn.delete {
+    background-color: red;
+}
+.title {
+    margin-bottom: 0;
+}
+
+.list-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 96%;
+    border-radius: 5px;
+    margin: 0px;
+    right: 0;
+}
+
+.left-side input {
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+.left-side input:focus {
+    outline: none;
+}
+.cancel {
+    background-color: red;
+}
+.save {
+    background-color: blue;
+}
+.no-post {
+    text-align: center;
+    margin-top: 30px;
+}

@@ -69,10 +69,19 @@ body {
     gap: 10px;
 }
 
+.logo {
+    color: #696969;
+}
+.dark .logo {
+    color: #fff;
+}
 .nav {
     display: flex;
     list-style: none;
     gap: 10px;
+}
+.nav .active{
+    color: green;
 }
 
 ul li a{

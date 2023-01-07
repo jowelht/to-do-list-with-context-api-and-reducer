@@ -6,11 +6,7 @@ const ThemeDefault = () => {
     const {theme, toggleTheme} = useContext(ThemeContext)
     return (
         <nav className="menu">
-            <ul className="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            
             <input type="checkbox"
                 onClick={toggleTheme} 
                 defaultChecked={theme === darkTheme}

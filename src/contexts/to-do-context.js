@@ -35,6 +35,11 @@ const reducer = (state, action) => {
                 ...state,
                 inputValue : action.submit,
             }
+        // case "SEARCH_RESULT": 
+        //     return {
+        //         ...state,
+        //         post : action.searchReasult,
+        //     }
         default:
             return state
     }
@@ -89,7 +94,6 @@ function ToDoProvider({children}) {
 
     const currentDate = new Date().toLocaleDateString()
     const currentTime = new Date().toLocaleTimeString()
-    console.log(currentTime)
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -117,6 +121,32 @@ function ToDoProvider({children}) {
         dispatch({type: "SUCCESS", payload: state.post.filter((item)=> item.id !== id)})
     }
 
+    // ==============================
+    // Task Update
+    // ==============================
+
+    const editHander = async (id, updateValue) => {
+        await axios.put(`${apiEndPoint}/${id}`, {
+            text: updateValue,
+            date: currentDate,
+            time: currentTime
+        })
+    }
+
+    // ==============================
+    // Searching To do Task
+    // ==============================
+
+    const searchHandler = (e) => {
+        const serachInput =  e.target.value;
+        const searchData = async () => {
+            const apiData = await axios.get(`${apiEndPoint}?q=${serachInput}`)
+            
+            dispatch({type: "SUCCESS", payload: apiData.data})
+        }
+       searchData()
+    }
+
 
     // ==============================
     // Provider All Value 
@@ -129,6 +159,8 @@ function ToDoProvider({children}) {
         newTaskInputHandler,
         submitHandler,
         deletePostHandeler,
+        editHander,
+        searchHandler
     }
 
     return (
